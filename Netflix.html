@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<head>
+    <title>Netflix Clone - Nguyễn Hoàng Điệp</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"/>
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+    />
+
+</head>
+
+<body>
+    <div className="basicLayout">
+        <!-- Thanh tieu de cua Netflix -->
+        <header>
+            <div className="wrapper">
+             
+                <nav class="navbar">
+
+                    <!-- Netflix logo  -->
+                    <div className="container_logo" style="width: 200px; height: 100px; ">
+                        <svg style="color: red; fill: currentColor" viewBox="0 0 111 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="default-ltr-cache-1d568uk ev1dnif2"><g><path d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z"></path></g></svg>
+                    </div>
+                    
+                    <!-- Chọn ngôn ngữ -->
+                    <div class="navbar__nav__items">
+                      <div class="nav__item">
+                        <div class="dropdown__container">
+                          <i class="fas fa-globe"></i>
+                          <select
+                            name="languages"
+                            id="languagesSelect"
+                            class="language__drop__down"
+                          >
+                            <option value="vietnamese" selected style="color: black;">Tiếng Việt</option>
+                            <option value="english" style="color: black;">English</option>
+                          </select>
+                        </div>
+                      </div>
+            
+                      <div class="nav__item">
+                        <button class="signin__button">Sign in</button>
+                      </div>
+                    </div>
+                </nav>
+            </div>          
+        </header>
+
+        <!-- Mục giới thiệu tính năng thứ 1 -->
+        <section class="hero">
+            <div class="hero__bg__image__container">
+                <img alt="" 
+                    aria-hidden="true" 
+                    data-uia="nmhp-card-hero+background+image" 
+                    src="https://assets.nflxext.com/ffe/siteui/vlv3/9f46b569-aff7-4975-9b8e-3212e4637f16/b8cca226-95ea-4851-8459-3e8940c3654e/VN-vi-20240415-popsignuptwoweeks-perspective_alpha_website_small.jpg" 
+                    srcset="https://assets.nflxext.com/ffe/siteui/vlv3/9f46b569-aff7-4975-9b8e-3212e4637f16/b8cca226-95ea-4851-8459-3e8940c3654e/VN-vi-20240415-popsignuptwoweeks-perspective_alpha_website_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/9f46b569-aff7-4975-9b8e-3212e4637f16/b8cca226-95ea-4851-8459-3e8940c3654e/VN-vi-20240415-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/9f46b569-aff7-4975-9b8e-3212e4637f16/b8cca226-95ea-4851-8459-3e8940c3654e/VN-vi-20240415-popsignuptwoweeks-perspective_alpha_website_large.jpg 1800w" class="default-ltr-cache-1jxs5rh e13sg9vu0">
+            </div>
+            <div class="hero__bg__overlay"></div>
+    
+            <div class="hero__card">
+              <h1 class="hero__title">
+                Chương trình truyền hình, phim không giới <br />
+                hạn và nhiều nội dung khác
+              </h1>
+              <p class="hero__subtitle">Xem ở mọi nơi. Hủy bất kỳ lúc nào.</p>
+              <p class="hero__description">
+                Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.
+              </p>
+    
+              <div class="email__form__container">
+                <div class="form__container">
+                  <input type="email" class="email__input" placeholder=" " />
+                  <label class="email__label">Địa chỉ email</label>
+                </div>
+                <button class="primary__button">
+                  Bắt đầu <i class="fal fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </section>
+          <section class="features__container">
+
+
+            <!-- Mục tính năng trên netflix -->
+            <div class="feature">
+              <div class="feature__details">
+                <h3 class="feature__title">Thưởng thức trên TV của bạn.</h3>
+                <h5 class="feature__sub__title">
+                    Xem trên TV thông minh, Playstation, Xbox, Chromecast, Apple TV, đầu phát Blu-ray và nhiều thiết bị khác.
+                </h5>
+              </div>
+              <div class="feature__image__container">
+                <img
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+                  alt="Feature image"
+                  class="feature__image"
+                />
+                <div class="feature__backgroud__video__container">
+                  <video 
+                    data-uia="nmhp-card-animation-asset-video" 
+                    autoplay="" 
+                    playsinline="" 
+                    muted="" 
+                    loop="">
+                    <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Giới thiệu tính năng thứ 2 -->
+            <div class="feature">
+              <div class="feature__details">
+                <h3 class="feature__title">
+                    Tải xuống nội dung để xem ngoại tuyến.
+                </h3>
+                <h5 class="feature__sub__title">
+                    Lưu lại những nội dung yêu thích một cách dễ dàng và luôn có thứ để xem.
+                </h5>
+              </div>
+              <div class="feature__image__container">
+                <img
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+                  alt="Feature image"
+                  class="feature__image"
+                />
+                <div class="feature__2__poster__container">
+                  <div class="poster__container">
+                    <img
+                      src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"
+                      alt="poster"
+                      class="poster"
+                    />
+                  </div>
+                  <div class="poster__details">
+                    <h4>Cậu bé mất tích</h4>
+                    <h6>Đang tải xuống...</h6>
+                  </div>
+                  <div class="download__gif__container">
+                    <img
+                      src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif"
+                      alt="downloading gif"
+                      class="gif"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Giới thiệu tính năng thứ 3 -->
+            <div class="feature">
+              <div class="feature__details">
+                <h3 class="feature__title">Xem ở mọi nơi</h3>
+                <h5 class="feature__sub__title">
+                    Phát trực tuyến không giới hạn phim và chương trình truyền hình trên điện thoại, máy tính bảng, máy tính xách tay và TV.
+                </h5>
+              </div>
+              <div class="feature__image__container feature__3__image__container">
+                <img
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png"
+                  alt="Feature image"
+                  class="feature__image feature__3__image"
+                />
+                <div
+                  class="feature__backgroud__video__container feature__3__backgroud__video__container"
+                >
+                  <video
+                    autoplay=""
+                    loop=""
+                    muted=""
+                    class="feature__backgroud__video feature__3__backgroud__video"
+                  >
+                    <source
+                      src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Giới thiệu tính năng thứ 4 -->
+            <div class="feature">
+              <div class="feature__details">
+                <h3 class="feature__title">Tạo hồ sơ cho trẻ em</h3>
+                <h5 class="feature__sub__title">
+                    Đưa các em vào những cuộc phiêu lưu với nhân vật được yêu thích trong một không gian riêng. Tính năng này đi kèm miễn phí với tư cách thành viên của bạn.
+                </h5>
+              </div>
+              <div class="feature__image__container">
+                <img 
+                    alt="" 
+                    src="https://occ-0-58-64.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABZSTDsJQCe6ndkevSo7c_grcr0f2YJ5pimzeSor98ix4Earwyoza7Liyg8OsNpA2cg3HKSF63qppfkKVP8BTEmcVRAkwa2lhcl5S.png?r=d73" 
+                    data-uia="nmhp-card-animation-asset-image" 
+                    class="feature__image">
+              </div>
+            </div>
+          </section>
+
+
+          <!-- Mục câu hỏi và câu trả lời thường có -->
+          <section class="FAQ__list__container">
+            <h1 class="FAQ__heading">Câu hỏi thường gặp</h1>
+            <div class="FAQ__list">
+              <div class="FAQ__accordian">
+                <button class="FAQ__title">
+                  Netflix là gì?<i class="fal fa-plus"></i>
+                </button>
+                <div class="FAQ__visible">
+                  <p>
+                    Netflix là dịch vụ phát trực tuyến mang đến đa dạng các loại chương trình truyền hình, phim, anime, phim tài liệu đoạt giải thưởng và nhiều nội dung khác trên hàng nghìn thiết bị có kết nối Internet.
+                  </p>
+                  <p>
+                    Bạn có thể xem bao nhiêu tùy thích, bất cứ lúc nào bạn muốn mà không gặp phải một quảng cáo nào – tất cả chỉ với một mức giá thấp hàng tháng. Luôn có những nội dung mới để bạn khám phá và những chương trình truyền hình, phim mới được bổ sung mỗi tuần!
+                  </p>
+                </div>
+              </div>
+              <div class="FAQ__accordian">
+                <button class="FAQ__title">
+                  Tôi phải trả bao nhiêu tiền để xem Netflix?<i class="fal fa-plus"></i>
+                </button>
+                <div class="FAQ__visible">
+                  <p>
+                    Xem Netflix trên điện thoại thông minh, máy tính bảng, TV thông minh, máy tính xách tay hoặc thiết bị phát trực tuyến, chỉ với một khoản phí cố định hàng tháng. Các gói dịch vụ với mức giá từ 70.000 ₫ đến 260.000 ₫ mỗi tháng. Không phụ phí, không hợp đồng.
+                  </p>
+                </div>
+              </div>
+              <div class="FAQ__accordian">
+                <button class="FAQ__title">
+                  Tôi có thể xem ở đâu?<i class="fal fa-plus"></i>
+                </button>
+                <div class="FAQ__visible">
+                  <p>
+                    Xem mọi lúc, mọi nơi. Đăng nhập bằng tài khoản Netflix của bạn để xem ngay trên trang web netflix.com từ máy tính cá nhân, hoặc trên bất kỳ thiết bị nào có kết nối Internet và có cài đặt ứng dụng Netflix, bao gồm TV thông minh, điện thoại thông minh, máy tính bảng, thiết bị phát đa phương tiện trực tuyến và máy chơi game.
+                  </p>
+                  <p>
+                    Bạn cũng có thể tải xuống các chương trình yêu thích bằng ứng dụng trên iOS, Android hoặc Windows 10. Vào phần nội dung đã tải xuống để xem trong khi di chuyển và khi không có kết nối Internet. Mang Netflix theo bạn đến mọi nơi.
+                  </p>
+                </div>
+              </div>
+              <div class="FAQ__accordian">
+                <button class="FAQ__title">
+                  Làm thế nào để hủy?<i class="fal fa-plus"></i>
+                </button>
+                <div class="FAQ__visible">
+                  <p>
+                    Netflix rất linh hoạt. Không có hợp đồng phiền toái, không ràng buộc. Bạn có thể dễ dàng hủy tài khoản trực tuyến chỉ trong hai cú nhấp chuột. Không mất phí hủy – bạn có thể bắt đầu hoặc ngừng tài khoản bất cứ lúc nào.
+                  </p>
+                </div>
+              </div>
+              <div class="FAQ__accordian">
+                <button class="FAQ__title">
+                  Tôi có thể xem gì trên Netflix?<i class="fal fa-plus"></i>
+                </button>
+                <div class="FAQ__visible">
+                  <p>
+                    Netflix có một thư viện phong phú gồm các phim truyện, phim tài liệu, chương trình truyền hình, anime, tác phẩm giành giải thưởng của Netflix và nhiều nội dung khác. Xem không giới hạn bất cứ lúc nào bạn muốn.
+                  </p>
+                </div>
+              </div>
+              <div class="FAQ__accordian">
+                <button class="FAQ__title">
+                  Netflix có phù hợp cho trẻ em không?<i class="fal fa-plus"></i>
+                </button>
+                <div class="FAQ__visible">
+                  <p>
+                    Trải nghiệm Netflix Trẻ em có sẵn trong gói dịch vụ của bạn, trao cho phụ huynh quyền kiểm soát trong khi các em có thể thưởng thức các bộ phim và chương trình phù hợp cho gia đình tại không gian riêng.
+                  </p>
+                  <p>
+                    Hồ sơ Trẻ em đi kèm tính năng kiểm soát của cha mẹ (được bảo vệ bằng mã PIN), cho phép bạn giới hạn độ tuổi cho nội dung con mình được phép xem, cũng như chặn những phim hoặc chương trình mà bạn không muốn các em nhìn thấy.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="FAQ__get__started__email">
+              <h3>
+                Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.
+              </h3>
+              <div class="email__form__container">
+                <div class="form__container">
+                  <input type="email" class="email__input" placeholder=" " />
+                  <label class="email__label">Địa chỉ email</label>
+                </div>
+                <button class="primary__button">
+                  Bắt đầu <i class="fal fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </section>
+
+        <!-- Footer của trang Netflix -->
+        <footer>
+        
+        </footer>
+    </div>
+
+    <!-- Phần footer -->
+    <footer>
+        <div class="footer__row__1">
+          <h4>Bạn có câu hỏi? Liên hệ với chúng tôi.</h4>
+        </div>
+        <div class="footer__row__2">
+          <div class="column__1">
+            <p>Câu hỏi thường gặp</p>
+            <p>Quan hệ với nhà đầu tư</p>
+            <p>Quyền riêng tư</p>
+            <p>Kiểm tra tốc độ</p>
+          </div>
+          <div class="column__2">
+            <p>Trung tâm trợ giúp</p>
+            <p>Việc làm</p>
+            <p>Tùy chọn cookie</p>
+            <p>Thông báo pháp lý</p>
+          </div>
+          <div class="column__3">
+            <p>Tài khoản</p>
+            <p>Các cách xem</p>
+            <p>Thông tin doanh nghiệp</p>
+            <p>Chỉ có trên Netflix</p>
+          </div>
+          <div class="column__4">
+            <p>Trung tâm đa phương tiện</p>
+            <p>Điều khoản sử dụng</p>
+            <p>Liên hệ với chúng tôi</p>
+          </div>
+        </div>
+        <div class="footer__row__3">
+          <div class="dropdown__container">
+            <i class="fas fa-globe"></i>
+            <select
+              name="languages"
+              id="languagesSelect"
+              class="language__drop__down"
+            >
+              <option value="vietnamese" selected>Tiếng Việt</option>
+              <option value="english" >English</option>
+            </select>
+          </div>
+        </div>
+        <div class="footer__row__4">
+          <p>Netflix Việt Nam</p>
+        </div>
+      </footer>
+</body>
